@@ -49,10 +49,11 @@ ggplot(data = life_table_child_region2,
        mapping = aes(x = Year, y = Region)) +
          geom_tile(aes(fill = Expectation_of_Life)) +
   ggthemes::scale_fill_continuous_tableau() +
+  theme(plot.title = element_text(face = "bold")) +
   labs(fill="Life Expectancy at Birth",
        x="", y="",
        title = "An Ageing World", 
-       subtitle = "Average Life Expectancy at Birth by Region",
+       subtitle = "Since 1950, average life expectancy has steadily increased across\nthe world. However, significant disparities between regions remain.",
        caption = "Data: UN World Population Prospects 2017")
   
 ##########################################
